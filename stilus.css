@@ -1,0 +1,91 @@
+body{
+    margin: auto;
+    width: 90%;
+    max-width: 1300px;
+}
+img{
+    width: 100%;
+}
+main{
+    margin: 0;
+    padding: 15px;
+    background-color: pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "n n n"
+    "a a s"
+    "a a s"
+    "f f f";
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    list-style-type: none;
+    margin: 0;
+}
+nav a{
+    text-decoration: none;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: a;
+}
+aside{
+    grid-area: s;
+    padding-left: 10px;
+    background-color: white;
+}
+footer{
+    grid-area: f;
+    text-align: center;
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+div{
+    background-color: white;
+    margin: 5px;
+}
+.kepformazas{
+    padding: 3px;
+}
+aside button{
+    color: red;
+}
+aside h3{
+    border-top: 1px solid grey;
+    color: brown;
+    margin-right: 15px;
+    text-align: center;
+}
+.egymasmelle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+article button{
+    margin: 10px;   
+    margin-right: 20px;
+    margin-left: 0;
+}
+.jobbra{
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 800px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "n"
+        "s"
+        "a"
+        "f";
+    }
+    article{
+        grid-template-columns: 1fr;
+    }
+}
